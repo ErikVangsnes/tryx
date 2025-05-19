@@ -1,1 +1,4 @@
-export default function handler(req, res) { res.status(200).json({ reply: 'Svar fra API' }); }
+export default function handler(req, res) {
+  const message = req.body.message || "";
+  res.status(200).json({ reply: "🤖 Jeg forstod: " + message });
+}
